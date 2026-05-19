@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+reports/*.json
+reports/*.txt
+data/bike_sharing_raw/
+data/hour.csv
+data/day.csv
+

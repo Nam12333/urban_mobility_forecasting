@@ -1,0 +1,80 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Urban Mobility Demand Forecasting Dashboard Preview">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102a36"/>
+      <stop offset="0.55" stop-color="#123d4a"/>
+      <stop offset="1" stop-color="#0b7f8a"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b7f8a"/>
+      <stop offset="1" stop-color="#57c4cf"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d38a24"/>
+      <stop offset="1" stop-color="#f3b55d"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#10202f" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .title{font:800 52px 'Segoe UI',Arial,sans-serif;fill:#fff}
+      .subtitle{font:400 22px 'Segoe UI',Arial,sans-serif;fill:rgba(255,255,255,.82)}
+      .label{font:800 15px 'Segoe UI',Arial,sans-serif;fill:#64748b;letter-spacing:.5px}
+      .value{font:900 42px 'Segoe UI',Arial,sans-serif;fill:#102a36}
+      .small{font:500 16px 'Segoe UI',Arial,sans-serif;fill:#64748b}
+      .cardtitle{font:800 22px 'Segoe UI',Arial,sans-serif;fill:#102a36}
+      .feature{font:700 16px 'Segoe UI',Arial,sans-serif;fill:#10202f}
+    </style>
+  </defs>
+
+  <rect width="1200" height="680" rx="28" fill="#edf3f7"/>
+  <rect x="42" y="38" width="1116" height="192" rx="22" fill="url(#hero)" filter="url(#shadow)"/>
+  <text x="78" y="102" class="title">Urban Mobility Demand Forecasting</text>
+  <text x="80" y="143" class="subtitle">Bike-sharing demand prediction with feature engineering, ridge regression and explainable output</text>
+  <rect x="80" y="168" width="190" height="34" rx="17" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.25)"/>
+  <text x="100" y="191" style="font:800 15px 'Segoe UI',Arial,sans-serif;fill:#bff7fb">ML PORTFOLIO</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="260" width="245" height="112" rx="18" fill="#fff"/>
+    <text x="95" y="295" class="label">MODEL RMSE</text>
+    <text x="95" y="342" class="value">48.20</text>
+    <text x="95" y="362" class="small">37.5% lower than baseline</text>
+
+    <rect x="340" y="260" width="245" height="112" rx="18" fill="#fff"/>
+    <text x="365" y="295" class="label">R2 SCORE</text>
+    <text x="365" y="342" class="value">0.594</text>
+    <text x="365" y="362" class="small">offline sample run</text>
+
+    <rect x="610" y="260" width="245" height="112" rx="18" fill="#fff"/>
+    <text x="635" y="295" class="label">FEATURES</text>
+    <text x="635" y="342" class="value">21</text>
+    <text x="635" y="362" class="small">engineered signals</text>
+
+    <rect x="880" y="260" width="245" height="112" rx="18" fill="#fff"/>
+    <text x="905" y="295" class="label">RECORDS</text>
+    <text x="905" y="342" class="value">720</text>
+    <text x="905" y="362" class="small">hourly observations</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="408" width="512" height="220" rx="20" fill="#fff"/>
+    <text x="98" y="450" class="cardtitle">RMSE Comparison</text>
+    <text x="98" y="495" class="feature">Baseline</text>
+    <rect x="210" y="478" width="300" height="22" rx="11" fill="#e8eff4"/>
+    <rect x="210" y="478" width="300" height="22" rx="11" fill="#ef4444" opacity=".86"/>
+    <text x="524" y="496" class="small">77.06</text>
+    <text x="98" y="548" class="feature">Ridge</text>
+    <rect x="210" y="531" width="300" height="22" rx="11" fill="#e8eff4"/>
+    <rect x="210" y="531" width="188" height="22" rx="11" fill="url(#bar)"/>
+    <text x="524" y="549" class="small">48.20</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="620" y="408" width="505" height="220" rx="20" fill="#fff"/>
+    <text x="648" y="450" class="cardtitle">Top Feature Weights</text>
+    <text x="648" y="492" class="feature">commute_hour</text><rect x="790" y="478" width="260" height="16" rx="8" fill="#e8eff4"/><rect x="790" y="478" width="260" height="16" rx="8" fill="url(#bar)"/>
+    <text x="648" y="526" class="feature">night_hour</text><rect x="790" y="512" width="260" height="16" rx="8" fill="#e8eff4"/><rect x="790" y="512" width="160" height="16" rx="8" fill="url(#gold)"/>
+    <text x="648" y="560" class="feature">workingday</text><rect x="790" y="546" width="260" height="16" rx="8" fill="#e8eff4"/><rect x="790" y="546" width="104" height="16" rx="8" fill="url(#bar)"/>
+    <text x="648" y="594" class="feature">temperature</text><rect x="790" y="580" width="260" height="16" rx="8" fill="#e8eff4"/><rect x="790" y="580" width="99" height="16" rx="8" fill="url(#bar)"/>
+  </g>
+</svg>
